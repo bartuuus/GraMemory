@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29001.49
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraMemory", "GraMemory\GraMemory.csproj", "{15DE0060-2C28-448D-86D0-198A612F5752}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15DE0060-2C28-448D-86D0-198A612F5752}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15DE0060-2C28-448D-86D0-198A612F5752}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15DE0060-2C28-448D-86D0-198A612F5752}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15DE0060-2C28-448D-86D0-198A612F5752}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {237B0FC8-42D2-4D34-BA28-D4609B2C8CC1}
+	EndGlobalSection
+EndGlobal
