@@ -20,7 +20,6 @@ namespace GraMemory
         {
             InitializeComponent();
             _settings = new GameSettings();
-
             UstawKontrolki();
 
 
