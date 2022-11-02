@@ -1,4 +1,6 @@
-﻿namespace GraMemory
+﻿using System;
+
+namespace GraMemory
 {
     partial class MemoryForm
     {
@@ -43,9 +45,10 @@
             // lblCzas
             // 
             this.lblCzas.AutoSize = true;
+            this.lblCzas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblCzas.Location = new System.Drawing.Point(35, 19);
             this.lblCzas.Name = "lblCzas";
-            this.lblCzas.Size = new System.Drawing.Size(33, 13);
+            this.lblCzas.Size = new System.Drawing.Size(38, 13);
             this.lblCzas.TabIndex = 0;
             this.lblCzas.Text = "Czas:";
             this.lblCzas.Click += new System.EventHandler(this.Label1_Click);
@@ -53,6 +56,7 @@
             // lblCzasWartosc
             // 
             this.lblCzasWartosc.AutoSize = true;
+            this.lblCzasWartosc.ForeColor = System.Drawing.Color.Red;
             this.lblCzasWartosc.Location = new System.Drawing.Point(74, 19);
             this.lblCzasWartosc.Name = "lblCzasWartosc";
             this.lblCzasWartosc.Size = new System.Drawing.Size(19, 13);
@@ -62,15 +66,17 @@
             // lblPunkty
             // 
             this.lblPunkty.AutoSize = true;
+            this.lblPunkty.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblPunkty.Location = new System.Drawing.Point(167, 19);
             this.lblPunkty.Name = "lblPunkty";
-            this.lblPunkty.Size = new System.Drawing.Size(43, 13);
+            this.lblPunkty.Size = new System.Drawing.Size(50, 13);
             this.lblPunkty.TabIndex = 2;
             this.lblPunkty.Text = "Punkty:";
             // 
             // lblPunktyWartosc
             // 
             this.lblPunktyWartosc.AutoSize = true;
+            this.lblPunktyWartosc.ForeColor = System.Drawing.Color.Red;
             this.lblPunktyWartosc.Location = new System.Drawing.Point(217, 19);
             this.lblPunktyWartosc.Name = "lblPunktyWartosc";
             this.lblPunktyWartosc.Size = new System.Drawing.Size(13, 13);
@@ -80,9 +86,10 @@
             // lblStartInfo
             // 
             this.lblStartInfo.AutoSize = true;
-            this.lblStartInfo.Location = new System.Drawing.Point(718, 19);
+            this.lblStartInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblStartInfo.Location = new System.Drawing.Point(679, 19);
             this.lblStartInfo.Name = "lblStartInfo";
-            this.lblStartInfo.Size = new System.Drawing.Size(95, 13);
+            this.lblStartInfo.Size = new System.Drawing.Size(134, 16);
             this.lblStartInfo.TabIndex = 4;
             this.lblStartInfo.Text = "Początek gry za 5.";
             // 
@@ -123,6 +130,11 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

@@ -20,8 +20,26 @@ namespace GraMemory
         {
             InitializeComponent();
             _settings = new GameSettings();
+
+            UstawKontrolki();
+
+
         }
 
+        void UstawKontrolki()
+        {
+            panelKart.Width = _settings.Bok * _settings.Kolumny;
+            panelKart.Height = _settings.Bok * _settings.Wiersze;
+            this.Width = panelKart.Width + 40;
+            this.Height = panelKart.Height + 100;
+
+            lblStartInfo.Text = $"Początek gry za {_settings.CzasPodgladu}";
+            lblPunktyWartosc.Text = _settings.AktualnePunkty.ToString();
+            lblCzasWartosc.Text = _settings.CzasGry.ToString();
+            lblStartInfo.Visible = true;
+
+        }
       
+
     }
 }
