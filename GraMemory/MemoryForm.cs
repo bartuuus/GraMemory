@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GraMemory.Core;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +13,15 @@ namespace GraMemory
 {
     public partial class MemoryForm : Form
     {
+        private GameSettings _settings;
+
+
         public MemoryForm()
         {
             InitializeComponent();
+            _settings = new GameSettings();
         }
 
-        private void Label1_Click(object sender, EventArgs e)
-        {
-
-        }
+      
     }
 }
