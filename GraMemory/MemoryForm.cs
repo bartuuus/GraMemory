@@ -22,8 +22,11 @@ namespace GraMemory
             _settings = new GameSettings();
             UstawKontrolki(_settings);
 
-
+            CardsGenerator.GenerujKarty(_settings, panelKart);
+            timerCzasPodgladu.Start();
         }
+
+       
 
         void UstawKontrolki(GameSettings settings)
         {
@@ -38,7 +41,25 @@ namespace GraMemory
             lblStartInfo.Visible = true;
 
         }
-      
 
+        private void TimerCzasPodgladu_Tick(object sender, EventArgs e)
+        {
+            _settings.CzasPodgladu--;
+
+            lblStartInfo.Text = $"Początek gry za {_settings.CzasPodgladu}";
+
+            if(_settings.CzasPodgladu <= 0)
+            {
+                lblStartInfo.Visible = false;
+                foreach(MemoryCard karta in panelKart.Controls)
+                {
+                    karta.Zakryj();
+                }
+
+                timerCzasPodgladu.Stop();
+                timerCzasGry.Start();
+            }
+
+        }
     }
 }

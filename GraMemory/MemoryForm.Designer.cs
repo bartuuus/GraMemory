@@ -56,7 +56,7 @@ namespace GraMemory
             // lblCzasWartosc
             // 
             this.lblCzasWartosc.AutoSize = true;
-            this.lblCzasWartosc.ForeColor = System.Drawing.Color.Red;
+            this.lblCzasWartosc.ForeColor = System.Drawing.Color.Black;
             this.lblCzasWartosc.Location = new System.Drawing.Point(74, 19);
             this.lblCzasWartosc.Name = "lblCzasWartosc";
             this.lblCzasWartosc.Size = new System.Drawing.Size(19, 13);
@@ -76,7 +76,7 @@ namespace GraMemory
             // lblPunktyWartosc
             // 
             this.lblPunktyWartosc.AutoSize = true;
-            this.lblPunktyWartosc.ForeColor = System.Drawing.Color.Red;
+            this.lblPunktyWartosc.ForeColor = System.Drawing.Color.Black;
             this.lblPunktyWartosc.Location = new System.Drawing.Point(217, 19);
             this.lblPunktyWartosc.Name = "lblPunktyWartosc";
             this.lblPunktyWartosc.Size = new System.Drawing.Size(13, 13);
@@ -111,12 +111,13 @@ namespace GraMemory
             // timerCzasPodgladu
             // 
             this.timerCzasPodgladu.Interval = 1000;
+            this.timerCzasPodgladu.Tick += new System.EventHandler(this.TimerCzasPodgladu_Tick);
             // 
             // MemoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(825, 450);
             this.Controls.Add(this.panelKart);
             this.Controls.Add(this.lblStartInfo);

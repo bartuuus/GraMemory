@@ -10,15 +10,15 @@ namespace GraMemory.Core
    public class GameSettings
     {
         public int CzasGry { get; private set; }
-        public int CzasPodgladu { get; private set; }
-        public int MaxPunkty { get; private set; }
+        public int CzasPodgladu { get; set; }
+        public int MaxPunkty { get; set; }
         public int Wiersze { get; private set; }
         public int Kolumny { get; private set; }
         public int Bok { get; private set; }
         public int AktualnePunkty { get; private set; }
 
-        public string PlikLogo => $"{Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "img", "logo.jpg")}";
-        public string FolderObrazki => $"{Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "img", "memory")}";
+        public string PlikLogo => $"{Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "obrazki", "logo.jpg")}";
+        public string FolderObrazki => $"{Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "obrazki", "karty")}";
         public GameSettings()
         {
             UstawStartowe();
