@@ -20,12 +20,12 @@ namespace GraMemory
         {
             InitializeComponent();
             _settings = new GameSettings();
-            UstawKontrolki();
+            UstawKontrolki(_settings);
 
 
         }
 
-        void UstawKontrolki()
+        void UstawKontrolki(GameSettings settings)
         {
             panelKart.Width = _settings.Bok * _settings.Kolumny;
             panelKart.Height = _settings.Bok * _settings.Wiersze;
