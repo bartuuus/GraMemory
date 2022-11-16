@@ -108,6 +108,7 @@ namespace GraMemory
             // timerCzasGry
             // 
             this.timerCzasGry.Interval = 1000;
+            this.timerCzasGry.Tick += new System.EventHandler(this.TimerCzasGry_Tick);
             // 
             // timerCzasPodgladu
             // 

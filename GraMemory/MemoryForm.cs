@@ -103,7 +103,7 @@ namespace GraMemory
             {
                 var tablicaElementow = Directory.GetFiles(settings.FolderObrazki);
 
-                settings.MaxPunkty = tablicaElementow.Length;
+                settings.MaxPunkty = tablicaElementow.Length * 10;
                 List<MemoryCard> karty = new List<MemoryCard>();
 
                 foreach (var element in tablicaElementow)
@@ -170,7 +170,67 @@ namespace GraMemory
         private void AktualizujPunkty(int punkty)
         {
             _settings.AktualnePunkty += punkty;
+
+            if (punkty < 0)
+            {
+            _settings.MaxPunkty += punkty;
+            }
+
+
+
             lblPunktyWartosc.Text = _settings.AktualnePunkty.ToString();
+        }
+
+        private void TimerCzasGry_Tick(object sender, EventArgs e)
+        {
+            _settings.CzasGry--;
+            lblCzasWartosc.Text = _settings.CzasGry.ToString();
+
+            if(_settings.CzasGry == 0 || _settings.AktualnePunkty >= _settings.MaxPunkty)
+            {
+                timerCzasGry.Stop();
+                timerZakrywacz.Stop();
+
+
+
+                MessageBox.Show($"KONIEC GRY \n" +
+                    $"Punkty: {_settings.AktualnePunkty} \n" +
+                    $"Zostało {_settings.CzasGry} czasu.");
+
+                var odpowiedz = MessageBox.Show("Chcesz zagrac jeszcze raz?", "Koniec...", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                
+                if(odpowiedz == DialogResult.Yes)
+                {
+
+                    _settings.UstawStartowe();
+                    GenerujKarty(_settings, panelKart);
+                    UstawKontrolki(_settings);
+
+                    panelKart.Enabled = true;
+                    _pierwszaOdkrytaKarta = null;
+                    _drugaOdkrytaKarta = null;
+
+                    timerCzasPodgladu.Start();
+
+
+                }
+                else if (odpowiedz == DialogResult.No)
+                {
+                    Application.Exit();
+                }
+
+
+
+
+
+
+
+
+
+
+
+            }
         }
     }
 }

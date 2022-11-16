@@ -9,7 +9,7 @@ namespace GraMemory.Core
 {
    public class GameSettings
     {
-        public int CzasGry { get; private set; }
+        public int CzasGry { get; set; }
         public int CzasPodgladu { get; set; }
         public int MaxPunkty { get; set; }
         public int Wiersze { get; private set; }
