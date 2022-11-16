@@ -15,7 +15,7 @@ namespace GraMemory.Core
         public int Wiersze { get; private set; }
         public int Kolumny { get; private set; }
         public int Bok { get; private set; }
-        public int AktualnePunkty { get; private set; }
+        public int AktualnePunkty { get; set; }
 
         public string PlikLogo => $"{Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "obrazki", "logo.jpg")}";
         public string FolderObrazki => $"{Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "obrazki", "karty")}";

@@ -103,6 +103,7 @@ namespace GraMemory
             // timerZakrywacz
             // 
             this.timerZakrywacz.Interval = 1000;
+            this.timerZakrywacz.Tick += new System.EventHandler(this.TimerZakrywacz_Tick);
             // 
             // timerCzasGry
             // 
